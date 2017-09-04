@@ -21,6 +21,6 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 0
+        return 1
     }
 }
