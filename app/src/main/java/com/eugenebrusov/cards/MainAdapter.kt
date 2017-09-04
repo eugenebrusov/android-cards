@@ -12,7 +12,7 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val layout = LayoutInflater.
                 from(parent?.context).
-                inflate(R.layout.item, parent, false)
+                inflate(R.layout.item_media_supporting_text, parent, false)
         return object : ViewHolder(layout) { /** empty implementation */ }
     }
 
