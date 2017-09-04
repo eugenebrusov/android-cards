@@ -10,10 +10,21 @@ import android.view.ViewGroup
  */
 class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val layout = LayoutInflater.
-                from(parent?.context).
-                inflate(R.layout.item_media_supporting_text, parent, false)
-        return object : ViewHolder(layout) { /** empty implementation */ }
+        when (viewType) {
+            MEDIA_SUPPORTING_TEXT_VIEW_TYPE -> {
+                val layout = LayoutInflater.
+                        from(parent?.context).
+                        inflate(R.layout.item_media_supporting_text, parent, false)
+                return object : ViewHolder(layout) { /** empty implementation */ }
+            }
+            AVATAR_MEDIA_SUPPORTING_TEXT_ACTIONS_VIEW_TYPE -> {
+                val layout = LayoutInflater.
+                        from(parent?.context).
+                        inflate(R.layout.item_avatar_media_supporting_text_actions, parent, false)
+                return object : ViewHolder(layout) { /** empty implementation */ }
+            }
+            else -> return object : ViewHolder(null) { /** empty implementation */ }
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
@@ -21,6 +32,19 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 1
+        return 2
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        when (position) {
+            0 -> return MEDIA_SUPPORTING_TEXT_VIEW_TYPE
+            1 -> return AVATAR_MEDIA_SUPPORTING_TEXT_ACTIONS_VIEW_TYPE
+            else -> return 0
+        }
+    }
+
+    companion object {
+        val MEDIA_SUPPORTING_TEXT_VIEW_TYPE = 1
+        val AVATAR_MEDIA_SUPPORTING_TEXT_ACTIONS_VIEW_TYPE = 2
     }
 }
