@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardView.Light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
-    style="@style/CardView.Light">
+    tools:ignore="ContentDescription">
 
     <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -34,9 +36,9 @@
             android:layout_marginTop="0dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Title"
+            android:text="@string/title"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/primary_text_default_material_light"
+            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toTopOf="@+id/avatar_image"
             app:layout_constraintStart_toEndOf="@+id/avatar_image"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -48,9 +50,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="0dp"
-            android:text="Subhead"
+            android:text="@string/subhead"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/secondary_text_default_material_light"
+            android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
             app:layout_constraintStart_toEndOf="@+id/avatar_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/avatar_image" />
@@ -79,9 +81,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Greyhound divisively hello coldly wonderfully marginally far upon excluding."
+            android:text="@string/supporting"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/primary_text_default_material_light"
+            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/media_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -95,8 +97,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="0dp"
             android:layout_marginBottom="0dp"
-            android:text="Action 1"
-            android:textColor="@color/primary_text_default_material_light"
+            android:text="@string/action_1"
+            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/supporting_text"
             app:layout_constraintStart_toStartOf="@+id/media_image"
             app:layout_constraintBottom_toBottomOf="parent" />
@@ -108,8 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginStart="0dp"
-            android:text="Action 2"
-            android:textColor="@color/primary_text_default_material_light"
+            android:text="@string/action_2"
+            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toTopOf="@+id/action_button_1"
             app:layout_constraintStart_toEndOf="@+id/action_button_1" />
 

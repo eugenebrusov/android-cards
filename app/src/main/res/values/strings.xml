@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Cards</string>
 
-    <string name="placeholder">Greyhound divisively hello coldly wonderfully marginally far upon excluding.</string>
+    <string name="supporting">Greyhound divisively hello coldly wonderfully marginally far upon excluding.</string>
+    <string name="title">Title</string>
+    <string name="subhead">Subhead</string>
+    <string name="action_1">Action 1</string>
+    <string name="action_2">Action 2</string>
 </resources>
