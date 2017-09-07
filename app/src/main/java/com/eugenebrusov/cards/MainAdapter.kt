@@ -23,7 +23,7 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
                         inflate(R.layout.item_avatar_media_supporting_text_actions, parent, false)
                 return object : ViewHolder(layout) { /** empty implementation */ }
             }
-            else -> return object : ViewHolder(null) { /** empty implementation */ }
+            else -> throw IllegalArgumentException("Inappropriate viewType")
         }
     }
 
