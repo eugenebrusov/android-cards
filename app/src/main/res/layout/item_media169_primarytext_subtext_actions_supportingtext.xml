@@ -19,14 +19,16 @@
             android:id="@+id/media_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="24dp"
             android:scaleType="centerCrop"
             app:srcCompat="@android:color/darker_gray"
             app:layout_constraintDimensionRatio="H,16:9"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/primary_text"
             app:layout_constraintVertical_chainStyle="spread_inside" />
 
@@ -37,6 +39,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
             android:text="@string/primary"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
@@ -67,11 +70,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
             android:text="@string/action_1"
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
-            app:layout_constraintTop_toBottomOf="@+id/sub_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/sub_text"
+            app:layout_constraintBottom_toTopOf="@+id/supporting_text" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -94,6 +99,26 @@
             android:background="#00FFFFFF"
             android:padding="6dp"
             app:srcCompat="@drawable/ic_expand_more_black_36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/action_button_1" />
+
+        <TextView
+            android:id="@+id/supporting_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:paddingTop="0dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp"
+            android:text="@string/expanded_supporting"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+            app:layout_constraintTop_toBottomOf="@+id/action_button_1"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
