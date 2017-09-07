@@ -29,6 +29,12 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
                         inflate(R.layout.item_avatar_media_actions, parent, false)
                 return object : ViewHolder(layout) { /** empty implementation */ }
             }
+            MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE -> {
+                val layout = LayoutInflater.
+                        from(parent?.context).
+                        inflate(R.layout.item_media169_primarytext_subtext_actions, parent, false)
+                return object : ViewHolder(layout) { /** empty implementation */ }
+            }
             else -> throw IllegalArgumentException("Inappropriate viewType")
         }
     }
@@ -38,7 +44,7 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return 4
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -46,6 +52,7 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
             0 -> return MEDIA_SUPPORTING_TEXT_VIEW_TYPE
             1 -> return AVATAR_MEDIA_SUPPORTING_TEXT_ACTIONS_VIEW_TYPE
             2 -> return AVATAR_MEDIA_ACTIONS_VIEW_TYPE
+            3 -> return MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
             else -> return -1
         }
     }
@@ -54,5 +61,6 @@ class MainAdapter : RecyclerView.Adapter<ViewHolder>() {
         val MEDIA_SUPPORTING_TEXT_VIEW_TYPE = 0
         val AVATAR_MEDIA_SUPPORTING_TEXT_ACTIONS_VIEW_TYPE = 1
         val AVATAR_MEDIA_ACTIONS_VIEW_TYPE = 2
+        val MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 3
     }
 }
