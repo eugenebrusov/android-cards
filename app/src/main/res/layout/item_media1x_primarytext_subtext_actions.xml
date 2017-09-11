@@ -27,7 +27,7 @@
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView" />
+            app:layout_constraintEnd_toStartOf="@+id/media_image" />
 
         <TextView
             android:id="@+id/sub_text"
@@ -40,10 +40,10 @@
             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/primary_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView" />
+            app:layout_constraintEnd_toStartOf="@+id/media_image" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/media_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="16dp"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="@string/action_1"
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/media_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
