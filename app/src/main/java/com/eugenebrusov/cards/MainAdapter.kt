@@ -38,6 +38,10 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
                 return ViewHolder(parent,
                         R.layout.item_media169_actions)
             }
+            MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE -> {
+                return ViewHolder(parent,
+                        R.layout.item_media11_primarytext_subtext_actions)
+            }
             else -> throw IllegalArgumentException("Inappropriate viewType")
         }
     }
@@ -47,7 +51,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 6
+        return 7
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -58,6 +62,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             3 -> return MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
             4 -> return PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
             5 -> return MEDIA169_ACTIONS_VIEW_TYPE
+            6 -> return MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
             else -> return -1
         }
     }
@@ -69,6 +74,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         val MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
         val PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 4
         val MEDIA169_ACTIONS_VIEW_TYPE = 5
+        val MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 6
     }
 
     open class ViewHolder : RecyclerView.ViewHolder {

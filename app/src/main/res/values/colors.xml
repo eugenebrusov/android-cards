@@ -6,4 +6,7 @@
 
     <color name="colorPrimaryTextDefaultMaterialLight">#DE000000</color>
     <color name="colorSecondaryTextDefaultMaterialLight">#8A000000</color>
+
+    <color name="colorPrimaryTextDefaultMaterialDark">#FFFFFFFF</color>
+    <color name="colorSecondaryTextDefaultMaterialDark">#B3FFFFFF</color>
 </resources>
