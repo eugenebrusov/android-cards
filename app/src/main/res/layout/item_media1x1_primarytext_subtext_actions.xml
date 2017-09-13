@@ -30,32 +30,39 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="#7F000000"
-            app:layout_constraintTop_toTopOf="@+id/primary_text"
+            app:layout_constraintTop_toTopOf="@+id/top_space"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Space
+            android:id="@+id/top_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/primary_text"/>
 
         <TextView
             android:id="@+id/primary_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="24dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/primary"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/colorPrimaryTextDefaultMaterialDark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/sub_text" />
+            app:layout_constraintBottom_toTopOf="@+id/sub_text"/>
 
         <TextView
             android:id="@+id/sub_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:text="@string/subtext"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorSecondaryTextDefaultMaterialDark"
@@ -68,6 +75,10 @@
             android:id="@+id/action_button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minWidth="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
             android:text="@string/action_1"
             android:textColor="@color/colorPrimaryTextDefaultMaterialDark"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +89,9 @@
             android:id="@+id/action_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
             android:text="@string/action_2"
             android:textColor="@color/colorPrimaryTextDefaultMaterialDark"
             app:layout_constraintTop_toTopOf="@+id/action_button_1"
