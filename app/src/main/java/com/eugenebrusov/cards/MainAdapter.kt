@@ -16,7 +16,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         when (viewType) {
             MEDIA_SUPPORTING_TEXT_VIEW_TYPE -> {
                 return ViewHolder(parent,
-                        R.layout.item_media_supporting_text)
+                        R.layout.item_media16x9_supportingtext)
             }
             AVATAR_MEDIA_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
