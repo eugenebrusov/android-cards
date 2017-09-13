@@ -35,9 +35,9 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
                 return ViewHolder(parent,
                         R.layout.item_primarytext_subtext_supportingtext_actions)
             }
-            MEDIA169_ACTIONS_VIEW_TYPE -> {
+            MEDIA16x9_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
-                        R.layout.item_media169_actions)
+                        R.layout.item_media16x9_actions)
             }
             MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
@@ -78,7 +78,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             2 -> return AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE
             3 -> return MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
             4 -> return PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
-            5 -> return MEDIA169_ACTIONS_VIEW_TYPE
+            5 -> return MEDIA16x9_ACTIONS_VIEW_TYPE
             6 -> return MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
             7 -> return MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
             8 -> return MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
@@ -94,7 +94,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         val AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE = 2
         val MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
         val PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 4
-        val MEDIA169_ACTIONS_VIEW_TYPE = 5
+        val MEDIA16x9_ACTIONS_VIEW_TYPE = 5
         val MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 6
         val MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 7
         val MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 8
