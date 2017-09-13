@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.Space
 import android.widget.TextView
-import kotlinx.android.synthetic.main.item_media169_primarytext_subtext_actions_supportingtext.view.*
+import kotlinx.android.synthetic.main.item_media16x9_primarytext_subtext_actions_supportingtext.view.*
 
 /**
  * Created by Eugene Brusov on 9/4/17.
@@ -28,7 +29,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             }
             MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE -> {
                 return ExpandableViewHolder(parent,
-                        R.layout.item_media169_primarytext_subtext_actions_supportingtext)
+                        R.layout.item_media16x9_primarytext_subtext_actions_supportingtext)
             }
             PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
@@ -108,15 +109,18 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     class ExpandableViewHolder : ViewHolder {
         val supportingTextView: TextView = itemView.supporting_text
         val expandButton: ImageButton = itemView.expand_button
+        val bottomSpace: Space = itemView.bottom_space
 
         constructor(parent: ViewGroup?, resId: Int) : super(parent, resId) {
             expandButton.setOnClickListener {
                 if (supportingTextView.visibility == View.VISIBLE) {
                     expandButton.setImageResource(R.drawable.ic_expand_less_black_36dp)
                     supportingTextView.visibility = View.GONE
+                    bottomSpace.visibility = View.GONE
                 } else {
                     expandButton.setImageResource(R.drawable.ic_expand_more_black_36dp)
                     supportingTextView.visibility = View.VISIBLE
+                    bottomSpace.visibility = View.VISIBLE
                 }
             }
         }
