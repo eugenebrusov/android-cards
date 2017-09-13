@@ -15,19 +15,19 @@ import kotlinx.android.synthetic.main.item_media16x9_primarytext_subtext_actions
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         when (viewType) {
-            MEDIA_SUPPORTING_TEXT_VIEW_TYPE -> {
+            MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE -> {
                 return ViewHolder(parent,
                         R.layout.item_media16x9_supportingtext)
             }
-            AVATAR_MEDIA_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE -> {
+            AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
                         R.layout.item_avatar_media16x9_supportingtext_actions)
             }
-            AVATAR_MEDIA_ACTIONS_VIEW_TYPE -> {
+            AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
                         R.layout.item_avatar_media16x9_actions)
             }
-            MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE -> {
+            MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE -> {
                 return ExpandableViewHolder(parent,
                         R.layout.item_media16x9_primarytext_subtext_actions_supportingtext)
             }
@@ -73,10 +73,10 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         when (position) {
-            0 -> return MEDIA_SUPPORTING_TEXT_VIEW_TYPE
-            1 -> return AVATAR_MEDIA_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
-            2 -> return AVATAR_MEDIA_ACTIONS_VIEW_TYPE
-            3 -> return MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
+            0 -> return MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE
+            1 -> return AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
+            2 -> return AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE
+            3 -> return MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
             4 -> return PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
             5 -> return MEDIA169_ACTIONS_VIEW_TYPE
             6 -> return MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
@@ -89,10 +89,10 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     companion object {
-        val MEDIA_SUPPORTING_TEXT_VIEW_TYPE = 0
-        val AVATAR_MEDIA_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 1
-        val AVATAR_MEDIA_ACTIONS_VIEW_TYPE = 2
-        val MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
+        val MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE = 0
+        val AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 1
+        val AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE = 2
+        val MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
         val PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 4
         val MEDIA169_ACTIONS_VIEW_TYPE = 5
         val MEDIA11_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 6
