@@ -5,6 +5,7 @@
     <string name="title">Title</string>
     <string name="subhead">Subhead</string>
     <string name="primary">Title goes here</string>
+    <string name="primary_short">Title here</string>
     <string name="subtext">Subtitle here</string>
     <string name="action_1">Action 1</string>
     <string name="action_2">Action 2</string>
