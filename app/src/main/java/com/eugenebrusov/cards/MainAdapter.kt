@@ -24,7 +24,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             }
             AVATAR_MEDIA_ACTIONS_VIEW_TYPE -> {
                 return ViewHolder(parent,
-                        R.layout.item_avatar_media_actions)
+                        R.layout.item_avatar_media16x9_actions)
             }
             MEDIA169_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE -> {
                 return ExpandableViewHolder(parent,
