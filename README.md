@@ -3,4 +3,4 @@ This project contains layout implementations for CardView using ConstraintLayout
 
 You can find more details on [eugenebrusov.com](http://eugenebrusov.com/cardview-with-constraintlayout/).
 
-![](https://github.com/eugenebrusov/cards/blob/master/Screenshot_1505405073.png)  
+![](https://github.com/eugenebrusov/cards/blob/master/screenshot.png)  
