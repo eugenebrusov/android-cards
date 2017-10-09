@@ -28,7 +28,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_chainStyle="spread_inside" />
+            app:layout_constraintBottom_toTopOf="@+id/sub_text"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/sub_text"
@@ -41,7 +42,8 @@
             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/primary_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/supporting_text" />
 
         <TextView
             android:id="@+id/supporting_text"
@@ -56,7 +58,8 @@
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/sub_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/action_button_1" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -71,7 +74,8 @@
             android:text="@string/action_1"
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/supporting_text"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
