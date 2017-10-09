@@ -109,18 +109,15 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     class ExpandableViewHolder : ViewHolder {
         val supportingTextView: TextView = itemView.supporting_text
         val expandButton: ImageButton = itemView.expand_button
-        val bottomSpace: Space = itemView.bottom_space
 
         constructor(parent: ViewGroup?, resId: Int) : super(parent, resId) {
             expandButton.setOnClickListener {
                 if (supportingTextView.visibility == View.VISIBLE) {
                     expandButton.setImageResource(R.drawable.ic_expand_less_black_36dp)
                     supportingTextView.visibility = View.GONE
-                    bottomSpace.visibility = View.GONE
                 } else {
                     expandButton.setImageResource(R.drawable.ic_expand_more_black_36dp)
                     supportingTextView.visibility = View.VISIBLE
-                    bottomSpace.visibility = View.VISIBLE
                 }
             }
         }
