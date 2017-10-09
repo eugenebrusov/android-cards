@@ -25,7 +25,8 @@
             app:srcCompat="@drawable/ic_avatar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_chainStyle="spread_inside" />
+            app:layout_constraintBottom_toTopOf="@+id/media_image"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/title_text"
@@ -63,7 +64,8 @@
             app:layout_constraintDimensionRatio="H,16:9"
             app:layout_constraintTop_toBottomOf="@+id/avatar_image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/supporting_text"/>
 
         <TextView
             android:id="@+id/supporting_text"
@@ -78,7 +80,8 @@
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/media_image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/action_button_1"/>
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -93,7 +96,8 @@
             android:text="@string/action_1"
             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
             app:layout_constraintTop_toBottomOf="@+id/supporting_text"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
