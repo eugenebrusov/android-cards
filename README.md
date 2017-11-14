@@ -3,4 +3,6 @@ This project contains layout implementations for CardView using ConstraintLayout
 
 You can find more details on [eugenebrusov.com](http://eugenebrusov.com/cardview-with-constraintlayout/).
 
-<img src="https://github.com/eugenebrusov/cards/blob/master/screenshot_w360.png" alt="A screenshot illustratrating the UI of the app" width="360" style="display: inline; float: center">
+<p align="center">
+    <img src="https://github.com/eugenebrusov/cards/blob/master/screenshot_w360.png" alt="A screenshot illustratrating the UI of the app" width="360">
+</p>
