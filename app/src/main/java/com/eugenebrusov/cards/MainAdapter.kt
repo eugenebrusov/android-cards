@@ -13,7 +13,8 @@ import kotlinx.android.synthetic.main.item_media16x9_primarytext_subtext_actions
  * Created by Eugene Brusov on 9/4/17.
  */
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         when (viewType) {
             MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE -> {
                 return ViewHolder(parent,
@@ -63,7 +64,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         /** empty implementation */
     }
 
@@ -72,45 +73,44 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     override fun getItemViewType(position: Int): Int {
-        when (position) {
-            0 -> return MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE
-            1 -> return AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
-            2 -> return AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE
-            3 -> return MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
-            4 -> return PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
-            5 -> return MEDIA16x9_ACTIONS_VIEW_TYPE
-            6 -> return MEDIA1x1_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
-            7 -> return MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
-            8 -> return MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
-            9 -> return MEDIA2X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
-            10 -> return MEDIA3X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
-            else -> return -1
+        return when (position) {
+            0 -> MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE
+            1 -> AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
+            2 -> AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE
+            3 -> MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE
+            4 -> PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE
+            5 -> MEDIA16x9_ACTIONS_VIEW_TYPE
+            6 -> MEDIA1x1_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
+            7 -> MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
+            8 -> MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
+            9 -> MEDIA2X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
+            10 -> MEDIA3X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE
+            else -> -1
         }
     }
 
     companion object {
-        val MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE = 0
-        val AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 1
-        val AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE = 2
-        val MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
-        val PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 4
-        val MEDIA16x9_ACTIONS_VIEW_TYPE = 5
-        val MEDIA1x1_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 6
-        val MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 7
-        val MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 8
-        val MEDIA2X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 9
-        val MEDIA3X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 10
+        const val MEDIA16x9_SUPPORTINGTEXT_VIEW_TYPE = 0
+        const val AVATAR_MEDIA16x9_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 1
+        const val AVATAR_MEDIA16x9_ACTIONS_VIEW_TYPE = 2
+        const val MEDIA16x9_PRIMARYTEXT_SUBTEXT_ACTIONS_SUPPORTINGTEXT_VIEW_TYPE = 3
+        const val PRIMARYTEXT_SUBTEXT_SUPPORTINGTEXT_ACTIONS_VIEW_TYPE = 4
+        const val MEDIA16x9_ACTIONS_VIEW_TYPE = 5
+        const val MEDIA1x1_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 6
+        const val MEDIA1X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 7
+        const val MEDIA15X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 8
+        const val MEDIA2X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 9
+        const val MEDIA3X_PRIMARYTEXT_SUBTEXT_ACTIONS_VIEW_TYPE = 10
     }
 
-    open class ViewHolder : RecyclerView.ViewHolder {
-        constructor(parent: ViewGroup?, resId: Int) : super(LayoutInflater.from(parent?.context).inflate(resId, parent, false))
-    }
+    open class ViewHolder(parent: ViewGroup?, resId: Int)
+        : RecyclerView.ViewHolder(LayoutInflater.from(parent?.context).inflate(resId, parent, false))
 
-    class ExpandableViewHolder : ViewHolder {
-        val supportingTextView: TextView = itemView.supporting_text
-        val expandButton: ImageButton = itemView.expand_button
+    class ExpandableViewHolder(parent: ViewGroup?, resId: Int) : ViewHolder(parent, resId) {
+        private val supportingTextView: TextView = itemView.supporting_text
+        private val expandButton: ImageButton = itemView.expand_button
 
-        constructor(parent: ViewGroup?, resId: Int) : super(parent, resId) {
+        init {
             expandButton.setOnClickListener {
                 if (supportingTextView.visibility == View.VISIBLE) {
                     expandButton.setImageResource(R.drawable.ic_expand_less_black_36dp)
@@ -121,5 +121,6 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
                 }
             }
         }
+
     }
 }
